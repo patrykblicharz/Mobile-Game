@@ -1,0 +1,601 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		45A60193237C44C900011906 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A60192237C44C900011906 /* AppDelegate.swift */; };
+		45A60195237C44C900011906 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 45A60194237C44C900011906 /* GameScene.sks */; };
+		45A60197237C44C900011906 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 45A60196237C44C900011906 /* Actions.sks */; };
+		45A60199237C44C900011906 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A60198237C44C900011906 /* GameScene.swift */; };
+		45A6019B237C44C900011906 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A6019A237C44C900011906 /* GameViewController.swift */; };
+		45A6019E237C44C900011906 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45A6019C237C44C900011906 /* Main.storyboard */; };
+		45A601A0237C44CB00011906 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45A6019F237C44CB00011906 /* Assets.xcassets */; };
+		45A601A3237C44CB00011906 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45A601A1237C44CB00011906 /* LaunchScreen.storyboard */; };
+		45A601AE237C44CB00011906 /* Desert_RunTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A601AD237C44CB00011906 /* Desert_RunTests.swift */; };
+		45A601B9237C44CC00011906 /* Desert_RunUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A601B8237C44CC00011906 /* Desert_RunUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		45A601AA237C44CB00011906 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 45A60187237C44C900011906 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 45A6018E237C44C900011906;
+			remoteInfo = "Desert Run";
+		};
+		45A601B5237C44CC00011906 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 45A60187237C44C900011906 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 45A6018E237C44C900011906;
+			remoteInfo = "Desert Run";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		45A6018F237C44C900011906 /* Desert Run.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Desert Run.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		45A60192237C44C900011906 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		45A60194237C44C900011906 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		45A60196237C44C900011906 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
+		45A60198237C44C900011906 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		45A6019A237C44C900011906 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		45A6019D237C44C900011906 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		45A6019F237C44CB00011906 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		45A601A2237C44CB00011906 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		45A601A4237C44CB00011906 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		45A601A9237C44CB00011906 /* Desert RunTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Desert RunTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		45A601AD237C44CB00011906 /* Desert_RunTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Desert_RunTests.swift; sourceTree = "<group>"; };
+		45A601AF237C44CC00011906 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		45A601B4237C44CC00011906 /* Desert RunUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Desert RunUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		45A601B8237C44CC00011906 /* Desert_RunUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Desert_RunUITests.swift; sourceTree = "<group>"; };
+		45A601BA237C44CC00011906 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		45A6018C237C44C900011906 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		45A601A6237C44CB00011906 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		45A601B1237C44CC00011906 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		45A60186237C44C900011906 = {
+			isa = PBXGroup;
+			children = (
+				45A60191237C44C900011906 /* Desert Run */,
+				45A601AC237C44CB00011906 /* Desert RunTests */,
+				45A601B7237C44CC00011906 /* Desert RunUITests */,
+				45A60190237C44C900011906 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		45A60190237C44C900011906 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				45A6018F237C44C900011906 /* Desert Run.app */,
+				45A601A9237C44CB00011906 /* Desert RunTests.xctest */,
+				45A601B4237C44CC00011906 /* Desert RunUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		45A60191237C44C900011906 /* Desert Run */ = {
+			isa = PBXGroup;
+			children = (
+				45A60192237C44C900011906 /* AppDelegate.swift */,
+				45A60194237C44C900011906 /* GameScene.sks */,
+				45A60196237C44C900011906 /* Actions.sks */,
+				45A60198237C44C900011906 /* GameScene.swift */,
+				45A6019A237C44C900011906 /* GameViewController.swift */,
+				45A6019C237C44C900011906 /* Main.storyboard */,
+				45A6019F237C44CB00011906 /* Assets.xcassets */,
+				45A601A1237C44CB00011906 /* LaunchScreen.storyboard */,
+				45A601A4237C44CB00011906 /* Info.plist */,
+			);
+			path = "Desert Run";
+			sourceTree = "<group>";
+		};
+		45A601AC237C44CB00011906 /* Desert RunTests */ = {
+			isa = PBXGroup;
+			children = (
+				45A601AD237C44CB00011906 /* Desert_RunTests.swift */,
+				45A601AF237C44CC00011906 /* Info.plist */,
+			);
+			path = "Desert RunTests";
+			sourceTree = "<group>";
+		};
+		45A601B7237C44CC00011906 /* Desert RunUITests */ = {
+			isa = PBXGroup;
+			children = (
+				45A601B8237C44CC00011906 /* Desert_RunUITests.swift */,
+				45A601BA237C44CC00011906 /* Info.plist */,
+			);
+			path = "Desert RunUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		45A6018E237C44C900011906 /* Desert Run */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 45A601BD237C44CC00011906 /* Build configuration list for PBXNativeTarget "Desert Run" */;
+			buildPhases = (
+				45A6018B237C44C900011906 /* Sources */,
+				45A6018C237C44C900011906 /* Frameworks */,
+				45A6018D237C44C900011906 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Desert Run";
+			productName = "Desert Run";
+			productReference = 45A6018F237C44C900011906 /* Desert Run.app */;
+			productType = "com.apple.product-type.application";
+		};
+		45A601A8237C44CB00011906 /* Desert RunTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 45A601C0237C44CC00011906 /* Build configuration list for PBXNativeTarget "Desert RunTests" */;
+			buildPhases = (
+				45A601A5237C44CB00011906 /* Sources */,
+				45A601A6237C44CB00011906 /* Frameworks */,
+				45A601A7237C44CB00011906 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				45A601AB237C44CB00011906 /* PBXTargetDependency */,
+			);
+			name = "Desert RunTests";
+			productName = "Desert RunTests";
+			productReference = 45A601A9237C44CB00011906 /* Desert RunTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		45A601B3237C44CC00011906 /* Desert RunUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 45A601C3237C44CC00011906 /* Build configuration list for PBXNativeTarget "Desert RunUITests" */;
+			buildPhases = (
+				45A601B0237C44CC00011906 /* Sources */,
+				45A601B1237C44CC00011906 /* Frameworks */,
+				45A601B2237C44CC00011906 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				45A601B6237C44CC00011906 /* PBXTargetDependency */,
+			);
+			name = "Desert RunUITests";
+			productName = "Desert RunUITests";
+			productReference = 45A601B4237C44CC00011906 /* Desert RunUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		45A60187237C44C900011906 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1120;
+				LastUpgradeCheck = 1120;
+				ORGANIZATIONNAME = "BLICHARZ, PATRYK";
+				TargetAttributes = {
+					45A6018E237C44C900011906 = {
+						CreatedOnToolsVersion = 11.2;
+					};
+					45A601A8237C44CB00011906 = {
+						CreatedOnToolsVersion = 11.2;
+						TestTargetID = 45A6018E237C44C900011906;
+					};
+					45A601B3237C44CC00011906 = {
+						CreatedOnToolsVersion = 11.2;
+						TestTargetID = 45A6018E237C44C900011906;
+					};
+				};
+			};
+			buildConfigurationList = 45A6018A237C44C900011906 /* Build configuration list for PBXProject "Desert Run" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 45A60186237C44C900011906;
+			productRefGroup = 45A60190237C44C900011906 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				45A6018E237C44C900011906 /* Desert Run */,
+				45A601A8237C44CB00011906 /* Desert RunTests */,
+				45A601B3237C44CC00011906 /* Desert RunUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		45A6018D237C44C900011906 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45A6019E237C44C900011906 /* Main.storyboard in Resources */,
+				45A60195237C44C900011906 /* GameScene.sks in Resources */,
+				45A601A0237C44CB00011906 /* Assets.xcassets in Resources */,
+				45A601A3237C44CB00011906 /* LaunchScreen.storyboard in Resources */,
+				45A60197237C44C900011906 /* Actions.sks in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		45A601A7237C44CB00011906 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		45A601B2237C44CC00011906 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		45A6018B237C44C900011906 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45A60199237C44C900011906 /* GameScene.swift in Sources */,
+				45A6019B237C44C900011906 /* GameViewController.swift in Sources */,
+				45A60193237C44C900011906 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		45A601A5237C44CB00011906 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45A601AE237C44CB00011906 /* Desert_RunTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		45A601B0237C44CC00011906 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45A601B9237C44CC00011906 /* Desert_RunUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		45A601AB237C44CB00011906 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 45A6018E237C44C900011906 /* Desert Run */;
+			targetProxy = 45A601AA237C44CB00011906 /* PBXContainerItemProxy */;
+		};
+		45A601B6237C44CC00011906 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 45A6018E237C44C900011906 /* Desert Run */;
+			targetProxy = 45A601B5237C44CC00011906 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		45A6019C237C44C900011906 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				45A6019D237C44C900011906 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		45A601A1237C44CB00011906 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				45A601A2237C44CB00011906 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		45A601BB237C44CC00011906 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		45A601BC237C44CC00011906 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		45A601BE237C44CC00011906 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZH7W9BR396;
+				INFOPLIST_FILE = "Desert Run/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "PB.Desert-Run";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		45A601BF237C44CC00011906 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZH7W9BR396;
+				INFOPLIST_FILE = "Desert Run/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "PB.Desert-Run";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		45A601C1237C44CC00011906 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Desert RunTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "PB.Desert-RunTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Desert Run.app/Desert Run";
+			};
+			name = Debug;
+		};
+		45A601C2237C44CC00011906 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Desert RunTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "PB.Desert-RunTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Desert Run.app/Desert Run";
+			};
+			name = Release;
+		};
+		45A601C4237C44CC00011906 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Desert RunUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "PB.Desert-RunUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Desert Run";
+			};
+			name = Debug;
+		};
+		45A601C5237C44CC00011906 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Desert RunUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "PB.Desert-RunUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Desert Run";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		45A6018A237C44C900011906 /* Build configuration list for PBXProject "Desert Run" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				45A601BB237C44CC00011906 /* Debug */,
+				45A601BC237C44CC00011906 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		45A601BD237C44CC00011906 /* Build configuration list for PBXNativeTarget "Desert Run" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				45A601BE237C44CC00011906 /* Debug */,
+				45A601BF237C44CC00011906 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		45A601C0237C44CC00011906 /* Build configuration list for PBXNativeTarget "Desert RunTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				45A601C1237C44CC00011906 /* Debug */,
+				45A601C2237C44CC00011906 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		45A601C3237C44CC00011906 /* Build configuration list for PBXNativeTarget "Desert RunUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				45A601C4237C44CC00011906 /* Debug */,
+				45A601C5237C44CC00011906 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 45A60187237C44C900011906 /* Project object */;
+}
