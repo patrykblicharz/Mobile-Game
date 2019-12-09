@@ -10,15 +10,12 @@ import SpriteKit
 import CoreMotion
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
-    
     struct Physics {
         static let Player : UInt32 = 1
         static let Water : UInt32 = 2
         static let Fence : UInt32 = 3
         static let Screen : UInt32 = 4
-        static let None : UInt32 = 5
     }
-
     let sand = SKSpriteNode(imageNamed: "sand")
     let sand2 = SKSpriteNode(imageNamed: "sand")
     let sand3 = SKSpriteNode(imageNamed: "sand") //background images
@@ -31,9 +28,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var isJumping = false
     var lastUpdate: TimeInterval = 0 //jump cooldown
     var gameOver = false
+    var scoreLabel: SKLabelNode!
+    var score = 0 {
+        didSet{
+            scoreLabel.text = "Score: \(score)"
+        }
+    }
     lazy var countdownLabel: SKLabelNode = {
-        var label = SKLabelNode(fontNamed: "BubbleGum")
-        label.fontSize = 20
+        var label = SKLabelNode(fontNamed: "Chalkduster")
+        //label.fontSize = 20
         label.zPosition = 6
         label.color = SKColor.white
         label.horizontalAlignmentMode = .left
@@ -41,10 +44,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         label.text = "Heat: \(counterStartValue)"
         return label
     }()
+    
     var counter = 0
     var counterTimer = Timer()
-    var counterStartValue = 30 //timer
-    
+    var counterStartValue = 15
     func startCounter() {
         counterTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(decrementCounter), userInfo: nil, repeats: true)
     }
@@ -76,7 +79,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
           water.physicsBody?.categoryBitMask = Physics.Water
           water.physicsBody?.collisionBitMask = Physics.Player
           self.addChild(water)
-         // let actionMoveDone = SKAction.removeFromParent()
           let actionMove = SKAction.moveBy(x: 0, y: -1000, duration: 4)
           water.run(SKAction.sequence([actionMove]))
         }
@@ -91,12 +93,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.physicsWorld.contactDelegate = self
         createSceneContents()
         createPlayer(scene: self)
-        spawnWater() //calling all the functions
+        spawnWater()
         spawnFence()
-        countdownLabel.position = CGPoint(x: frame.midX, y: 700)
+        countdownLabel.position = CGPoint(x: frame.midX + 45, y: 713)
         addChild(countdownLabel)
         counter = counterStartValue
-        startCounter()
+        startCounter() //calling functions
 
         sand.position = CGPoint(x: frame.midX, y: 0)
         sand.size = CGSize(width: screen.width * 1.1, height: self.frame.size.height)
@@ -111,7 +113,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         sand3.position = CGPoint(x: frame.midX, y: self.frame.size.height + sand2.position.y)
         sand3.size = CGSize(width: screen.width * 1.1, height: self.frame.size.height)
         sand3.zPosition = 3
-        self.addChild(sand3)
+        self.addChild(sand3) //three backgroundimages to make it look like it's an endless scroll
         
         parallax = SKAction.repeatForever(SKAction.move(by: CGVector(dx: 0, dy: -self.frame.size.height),duration: 5))
         sand.run(parallax)
@@ -119,7 +121,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         sand3.run(parallax) //scrolling background
         
         motionManager = CMMotionManager()
-        motionManager?.startAccelerometerUpdates()
+        motionManager?.startAccelerometerUpdates() //accelerometer
+        
+        scoreLabel = SKLabelNode(fontNamed: "Chalkduster")
+        scoreLabel.text = "Score: 0"
+        scoreLabel.horizontalAlignmentMode = .right
+        scoreLabel.zPosition = 6
+        scoreLabel.position = CGPoint(x: frame.midX - 50, y: 700)
+        addChild(scoreLabel)
+        
     }
     override func update(_ currentTime: TimeInterval) {
     if let accelerometerData = motionManager?.accelerometerData {
@@ -137,26 +147,27 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         jumpTime += currentTime - lastUpdate
         lastUpdate = currentTime
         
-//        if counter <= 0 {
-//                  gameOver = true
-//                  player.removeFromParent()
-//                  exit(0)
-//              } //game over when heat runs out
+        if counter <= 0 {
+                  gameOver = true
+                  player.removeFromParent()
+                  exit(0)
+              } //game over when heat runs out
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) { //giving the player abiliy to jump
         if jumpTime > jumpCooldown {
-            jumpTime = 0
             isJumping = true
+            jumpTime = 0
             let jumpAction = SKAction.moveBy(x: 0, y: 100, duration: 0.4) //move up
             let jumpDownAction = SKAction.moveBy(x: 0, y: -100, duration: 0.4) // move down
-            let jumpSequence = SKAction.sequence([jumpAction, jumpDownAction]) // the whole sequence
+            let resetJump = SKAction.run {
+                self.isJumping = false
+            }
+            let jumpSequence = SKAction.sequence([jumpAction, jumpDownAction, resetJump]) // the whole sequence
             player.run(jumpSequence)
         }
-        else{
-            isJumping = false
-        }
     }
-      func createPlayer(scene: SKScene) {  //player creation and physics
+
+    func createPlayer(scene: SKScene) {  //player creation and physics
         player.name = "player"
         player.isUserInteractionEnabled = false;
         player.position.x = scene.frame.minX + 250
@@ -202,8 +213,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
   
     func didBegin(_ contact: SKPhysicsContact) { //what happens on certain collisions
-        // var entity1 entity2
-        // make sure that entity1 is player
        var body1 = SKPhysicsBody()
        var body2 = SKPhysicsBody()
 
@@ -219,9 +228,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         if(body1.categoryBitMask == Physics.Player && body2.categoryBitMask == Physics.Water)
        {
           counter += 8
+          score += 2
           contact.bodyB.node?.removeFromParent()
        }
-        if(!isJumping){
+        if(isJumping == false){
         if(body1.categoryBitMask == Physics.Player && body2.categoryBitMask == Physics.Fence)
         {
             exit(0)
